@@ -1,0 +1,423 @@
+:root {
+    /* Primary */
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+
+    /* Neutral */
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--marine-blue);
+}
+
+.outer{
+    display: flex;
+}
+
+#main{
+    background-color: var(--purplish-blue);
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 100px;
+    height: 96vh;
+    margin-top:2vh;
+    margin-left:2vh;
+    border-radius: 15px;
+    
+}
+
+#side-table{
+    margin-top: 50px;
+}
+
+.page-no{
+    border: 2px solid var(--pastel-blue);   
+    color: var(--pastel-blue);
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.page-main{
+    margin-bottom: 50px;
+}
+
+.step-no{
+    color: var(--pastel-blue);
+}
+
+.step-name{
+    color: var(--light-blue);
+    font-weight: bold;
+}
+
+.page-main-2{
+    margin-left: 20px;
+}
+
+.step-page{
+    width: 800px;
+    height: 96vh;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-name{
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+.step-inner-page{
+    height: 620px;
+    padding: 40px;
+}
+
+.page-desc{
+    color: var(--cool-gray);
+    margin-top: 20px;
+}
+
+form{
+    margin-top: 60px;
+}
+
+form  label{
+    display: block;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+form input{
+
+    padding: 15px;
+    border-color: var(--light-gray);
+    border-radius: 5px;
+    border-style: double;
+    width: 680px;
+    color: var(--cool-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.next-step-page-1{
+    display: block;
+    margin-top: 50px;
+    padding: 15px 25px;
+    color: var(--light-gray);
+    background-color: var(--marine-blue);
+    border-color: var(--marine-blue);
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.card-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card{
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    width: 800px;
+    padding: 20px;
+    display: grid;
+    margin: 20px;
+}
+
+.card-heading{
+    margin-top: 80px;
+}
+
+.step-buttons button{
+    display: block;
+    margin-top: 50px;
+    padding: 15px 25px;
+    color: var(--light-gray);
+    background-color: var(--marine-blue);
+    border-color: var(--marine-blue);
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.step-buttons {
+    display: flex;
+    justify-content: space-between;  
+}
+
+.button-group{
+    position: fixed;
+    bottom: 4vh; 
+    width: 700px;
+}
+
+.button-group-1{
+    position: fixed;
+    bottom: 4vh;
+    width: 700px;
+}
+
+.step-buttons button:nth-child(1){
+    color: var(--cool-gray);
+    background-color: var(--white);
+    border: 0;
+}
+
+.add-ons-options{
+    width: 700px;
+    margin-top: 50px;;
+}
+
+.add-on{
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--light-gray);
+}
+
+.add-on-desc{
+    margin-top: -15px;
+    font-size: 12px;
+    color: var(--cool-gray);
+}
+
+.add-on div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 500px;
+}
+
+.addOn-name-desc, .addOn-amount, .check-box{
+    margin: 0 20px;
+}
+
+.finish-up-values{
+    display: flex;
+    justify-content: space-between;
+}
+
+.finish-up-page-table{
+    margin-top: 50px;
+}
+
+#change{
+    border: none;
+    padding: 0;
+    background-color: white;
+    text-decoration: underline;
+}
+
+#change:hover{
+    cursor: pointer;
+    color: var(--marine-blue);
+}
+
+hr{
+    margin: 20px 0;
+}
+
+#confirm{
+    background-color: var(--purplish-blue);
+    border: var(--purplish-blue);
+}
+
+.thank-you-page{
+    display: grid;
+    place-items: center;
+    height: fit-content;
+    margin-top: 150px;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.last-page-image, .last-page h3, .last-page p{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#next-step-first-page:hover{
+    cursor: pointer;
+}
+
+#step-page-2, #step-page-3, #step-page-4, #step-page-5{
+    display: none;
+}
+
+#page-no-1{
+    background-color: var(--light-blue);
+    color: var(--marine-blue);
+}
+
+.thank-you-page p{
+    text-align: center;
+    color: var(--cool-gray);
+}
+
+.card:hover{
+    border-color: var(--purplish-blue);
+    cursor: pointer;
+}
+
+/* .card:active{
+    border-color: var(--marine-blue);
+} */
+
+.card p:nth-of-type(1), .card h3{
+    margin-bottom: -1.5vh;
+}
+
+.card p:nth-of-type(1){
+    color: var(--cool-gray);
+}
+
+.card p:nth-of-type(2){
+    color: var(--marine-blue);
+}
+
+.check-box{
+    width: 20px;
+    height: 20px;
+}
+
+form span, #plan-validation{
+    color: red;
+    font-size: 12px;
+}
+
+#plan-validation{
+    visibility: hidden;
+    align-items: center;
+}
+
+.mobile-side-table{
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+    body{
+        background-color: var(--magnolia);
+    }
+
+    .mobile-side-table{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+    }
+
+    .page-no{ 
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    #main{
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 30vh;
+    }
+
+    #side-table{
+        display: none;
+    }
+    
+    .step-page{
+        position: absolute;
+        width: 90vw;
+        left: 5vw;
+        top: 6vh;
+    }
+
+    .add-ons-options, form > label{
+        width: 100%;
+    }
+
+    form > input{
+        width: 93%;
+    }
+
+    .for-mobile-device{
+        background-color: var(--white);
+        padding: 30px;
+        border-radius: 15px;   
+        margin-bottom: 15vh; 
+    }
+
+    .page-desc, form  label,form, .card-main, .card-heading, .thank-you-page, .finish-up-page-table, .add-on-desc, .add-ons-options, .step-buttons button, .next-step-page-1{
+        margin-top: 10px;
+    }
+
+    .step-inner-page, .step-page{
+        height: fit-content;
+    }
+
+    .card{
+        width: 100%;
+        margin-left: -5%;
+    }
+
+    .card-main{
+        display: grid;
+        grid-template-columns: 90%;
+    }
+
+    .button-group-1, .button-group{
+        background-color: var(--alabaster);
+        height: 12vh;
+        position: fixed;
+        left: 0vw;
+        bottom: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    
+    .next-step-page-1, .next-step, #confirm{
+        margin-right: 5vw;
+    }
+
+    .prev-step{
+        position: fixed;
+        left: 5px;
+    }
+
+    #thank-you-desc-mobile-device{
+        line-height: 20px;
+    }
+
+    .card-inner-div-text{
+        display: grid;
+        width: fit-content;
+        padding: 0 50px;
+    }
+
+    .card{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+}

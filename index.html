@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="toggle-style.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <!-- Sidebar start -->
+    <div id="main">
+      <div class="mobile-side-table">
+        <div class="page-main">
+          <div class="page-no" id="mobile-page-no-1">1</div>
+        </div>
+        <div class="page-main">
+          <div class="page-no" id="mobile-page-no-2">2</div>
+        </div>
+        <div class="page-main">
+          <div class="page-no" id="mobile-page-no-3">3</div>
+        </div>
+        <div class="page-main">
+          <div class="page-no" id="mobile-page-no-4">4</div>
+        </div>
+      </div>
+      <table id="side-table">
+        <tr>
+          <td>
+            <div class="page-main">
+              <div class="page-no" id="page-no-1">1</div>
+            </div>
+          </td>
+          <td>
+            <div class="page-main page-main-2">
+              <div class="step-no">STEP 1</div>
+              <div class="step-name">YOUR INFO</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="page-main">
+              <div class="page-no" id="page-no-2">2</div>
+            </div>
+          </td>
+          <td>
+            <div class="page-main page-main-2">
+              <div class="step-no">STEP 2</div>
+              <div class="step-name">SELECT PLAN</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="page-main">
+              <div class="page-no" id="page-no-3">3</div>
+            </div>
+          </td>
+          <td>
+            <div class="page-main page-main-2">
+              <div class="step-no">STEP 3</div>
+              <div class="step-name">ADD-ONS</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="page-main">
+              <div class="page-no" id="page-no-4">4</div>
+            </div>
+          </td>
+          <td>
+            <div class="page-main page-main-2">
+              <div class="step-no">STEP 4</div>
+              <div class="step-name">SUMMARY</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+    <div class="step-page" id="step-page-1">
+      <div class="step-inner-page">
+        <div class="for-mobile-device">
+          <div class="page-name">Personal info</div>
+          <div class="page-desc">Please provide your name, email address, and phone number.</div>
+          <form>
+            <label for="name">Name<span>*</span></label>
+            <input type="text" name="name" id="name" placeholder="e.g. Stephen King">
+            
+            <label for="email">Email Address<span>*</span></label>
+            <input type="text" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
+            
+            <label for="phone">Phone Number<span>*</span></label>
+            <input type="text" name="phone" id="phone" placeholder="e.g. +1 234 567 890">
+  
+          </form>
+        </div>
+        <div class="button-group-1">
+          <button type="button" class="next-step-page-1" id="next-step-1-page">Next Step</button>
+        </div>
+        
+      </div>
+    </div>
+    <!-- Step 1 end -->
+
+    <!-- Step 2 start -->
+    <div class="step-page" id="step-page-2">
+      <div class="step-inner-page">
+        <div class="for-mobile-device">
+          <div class="page-name">Select your plan</div>
+          <div class="page-desc">You have the option of monthly or yearly billing.</div>
+          <div class="card-main grid-container">
+          </div>
+          <!-- Rounded switch -->
+          <span id="plan-validation">Please select a Plan</span>
+          <div class="toggle-bar">
+            <p>Monthly</p>
+            <label class="switch">
+              <input type="checkbox" id="toggle-switch">
+              <span class="slider round" id="checkbox" onclick="toggleSelectedType()"></span>
+            </label>
+            <p>Yearly</p>
+          </div>
+        </div>
+        <div class="button-group">
+          <div class="step-buttons">
+            <button type="button" class="prev-step" id="prev-step-2-page" onclick="toPrevPage(2)">Go Back</button>
+            <button type="button" class="next-step" id="next-step-2-page">Next Step</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+    <div class="step-page" id="step-page-3">
+      <div class="step-inner-page">
+        <div class="for-mobile-device">
+          <div class="page-name">Pick add-ons</div>
+          <div class="page-desc">Add-ons help enhance your gaming experience.</div>
+          <div class="add-ons-options"></div>
+        </div>
+        <div class="button-group">
+          <div class="step-buttons">
+            <button type="button" class="prev-step" id="prev-step-3-page" onclick="toPrevPage(3)">Go Back</button>
+            <button type="button" class="next-step" id="next-step-3-page" onclick="toNextPage(3)">Next Step</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+    <div class="step-page" id="step-page-4">
+      <div class="step-inner-page">
+        <div class="for-mobile-device">
+          <div class="page-name">Finishing up</div>
+          <div class="page-desc"> Double-check everything looks OK before confirming.</div>
+          <!-- Dynamically add subscription and add-on selections here -->
+          <div class="finish-up-page-table">
+            <div class="finish-up-values">
+              <div>
+                <h3 id="plan-name">Select Plan</h3>
+              </div>
+              <div>
+                <h3 id="plan-amount">--</h3>
+              </div>
+            </div>
+            <div class="finish-up-values">
+              <div>
+                <button type="button" id="change" onclick="changeFinalSelectedType()">Change</button>
+              </div>
+            </div>
+            <div>
+              <div><hr></div>
+            </div>
+            <!-- Dynamic div class="finish-up-values" for add-ons -->
+            <div id="all-final-add-on"></div>
+            <div class="finish-up-values">
+              <div>
+                <p>Total (per <span id="plan-duration">month/year</span>)</p>
+              </div>
+              <div id="total-cost">
+                <p id="total">0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-group">
+          <div class="step-buttons">
+            <button type="button" class="prev-step" id="prev-step-4-page" onclick="toPrevPage(4)">Go Back</button>
+            <button type="button" id="confirm" onclick="showThankyouPage()">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+    <div class="step-page" id="step-page-5">
+      <div class="step-inner-page thank-you-page">
+        <div class="for-mobile-device last-page">
+          <div class="last-page-image">
+            <img src="assets/images/icon-thank-you.svg" alt="thank you" id="thank-you">
+          </div>
+          <h3>Thank you!</h3>
+          <p id="thank-you-desc-mobile-device">Thanks for confirming your subscription! We hope you have fun 
+            using our platform. If you ever need support, please feel free 
+            to email us at support@loremgaming.com.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Step 5 end -->
+  </div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
+<script src="script.js"></script>

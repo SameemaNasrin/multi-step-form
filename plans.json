@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "Arcade", 
+        "price_monthly" : "9", 
+        "price_yearly" : "90"
+    },
+    {
+        "name" : "Advanced", 
+        "price_monthly" : "12", 
+        "price_yearly" : "120" 
+    },
+    {
+        "name" : "Pro", 
+        "price_monthly" : "15", 
+        "price_yearly" : "150"
+    }
+]
