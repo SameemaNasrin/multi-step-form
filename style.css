@@ -318,7 +318,7 @@ form span, #plan-validation{
     display: none;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 375px) {
     body{
         background-color: var(--magnolia);
     }
